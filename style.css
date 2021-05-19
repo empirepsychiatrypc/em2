@@ -1015,6 +1015,20 @@ footer img{
   }
 
   @media only screen and (max-width: 1024px){
+      /* start */
+    
+    .mainCont h1 {
+        margin: 0;
+        padding: 0;
+    }
+    
+    
+    #pageBtn {
+        display: inline-block;
+        margin-top: 10px;
+       margin-bottom: 20px;
+    }
+      /* end */
       nav {
           background:  var(--main-bg-color);
           position: fixed;
@@ -1157,9 +1171,27 @@ footer img{
          width: 50%;
          margin: 0 auto;
      }
-
-     
-    
-    
    
+  }
+
+  @media only screen and (max-width: 768px){
+      /* start */
+    .mainCont{
+        padding-top: 125px;
+    }
+    .mainBod {
+        width: 90%;
+        margin: 0 auto;
+        color: #074361;
+        background: white;
+        padding: 20px 40px;
+        border-radius: 50px;
+        display: block;
+        text-align: center;
+    }
+    .innerNav {
+        padding-left: 40px;
+    }
+    
+      /* end */
   }
