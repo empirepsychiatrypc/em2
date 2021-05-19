@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empire Psychiatry | Schedule Now</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav id="navbar" class="noAnim">
+      <div class="innerNav">
+        <div id="logo">
+          <a href="/index.html"
+            ><img src="images/BlueTransparent.png" alt=""
+          /></a>
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a class="active" href="/about.html">About Us</a></li>
+            <li><a href="/index.html#whatWeTreat">Services</a></li>
+            <li><a href="/fees.html">Fees</a></li>
+            <li>     <a data-check="noActive" class="btn lrg" href="/schedule.html"> Schedule Now</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div onclick="openNav()" class="openMobile">
+        <img src="/images/open.png" alt="" />
+      </div>
+    </nav>
+
+    <header class="schedule-header" id="schedule-header">
+
+        <div class="scheduleOverlay">
+          <div id="bigWhite">
+            <h1>Schedule Now With Empire Psychiatry</h1>
+            <h2>Thank you for your interest in Empire Psychiatry. Please fill out the simple form below, and we'll contact you shortly with follow-up information.</h2>
+            <div class="noAnim contactWrap">
+                
+                <div class="formCont">
+                  <script type="text/javascript" src="https://hipaa.jotform.com/jsform/203205178857156"></script>
+                </div>
+              </div>
+          </div>
+      
+      </div>
+      
+    </header>
+    <div id="result"></div>
+
+    
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <a href="/index.html">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/index.html#whatWeTreat">Services</a>
+        <a href="/fees.html">Fees</a>
+        <a class="btn" href="#">Schedule Now</a>
+      </div>
+    </div>
+
+
+    <script >
+let beenHere = localStorage.getItem("been-here");
+
+
+
+
+
+window.onload = function(){
+      setTimeout(() => {
+        if(beenHere){
+          document.getElementById("schedule-header").style.display = 'none'
+          document.getElementById("result").style.padding = '20px 0'
+          document.getElementById('203205178857156').style.display = 'none'
+          document.getElementById("result").innerHTML = `<h2><span style="color:red">You've already filled out this form.</span> The next step is to click on the link below.</h2>
+                                                                                                <a href="${localStorage.getItem("been-here")}" >Patient Intake Form (Detailed)</a>
+                                                                                                <p>If you feel this is a mistake because you did not fill out the original form click the button below:</p>
+                                                                                                <button class="btn" id="resetStorage">I Need The Form</button>`
+           document.getElementById('resetStorage').addEventListener('click', function(){
+           localStorage.clear();
+          window.location.reload()
+          
+  })
+}else{
+  var iframe = document.getElementById('203205178857156');
+        var innerDoc = (iframe.contentDocument) ? iframe.contentDocument : iframe.contentWindow.document;
+        let form = innerDoc.querySelector('form')
+        form.addEventListener('click', setStorage)
+        return beenHere = true
+}
+     
+
+      }, 2000)
+    }
+
+    function setStorage() {
+      
+      localStorage.setItem("been-here", "https://hipaa.jotform.com/203214923116041");
+     
+    }
+    </script>
+
+    <script src="main.js"></script>
+
+    
+  </body>
+</html>

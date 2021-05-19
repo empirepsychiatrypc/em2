@@ -1,0 +1,1165 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+:root {
+    --main-bg-color: #074361;
+    --secondary: #ebe6a4;
+  }
+  
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+   
+}
+#result{
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: var(--secondary);
+   
+}
+.actingFooter {
+    text-align: center;
+}
+#result a{
+    font-size: 24px;
+}
+
+#result p{
+    color: red;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background:#074361d0;
+    box-shadow: 30px 0 60px rgba(0, 0, 0, 0.541);
+    animation: fadeInUp ease 3s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+
+footer div{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer img {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+footer div p a {
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: 900;
+}
+
+footer div p {
+    color: white;
+}
+
+#topCards{
+    background: var(--main-bg-color);
+}
+.big{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+}
+
+h1, nav a, .btn {
+    /* font-family: 'Cinzel Decorative', cursive; */
+    font-family: 'Playfair Display', serif;
+}
+.cursive{
+    font-family: 'Yellowtail', cursive;
+    font-size: 2rem;
+}
+nav{
+    width: 100%;
+    height: auto;
+    background:#d3dbdf00;
+    position: absolute;
+    top: 0;
+    left: 0;
+  z-index: 99;
+  animation: fadeInDown ease 3s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+.noAnim{
+    animation: none;
+}
+.innerNav{
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    padding: 10px 0 20px 0;
+    grid-template-columns: 10% 90%;
+}
+
+#logo, .links{
+    width: 100%;
+
+}
+
+#logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.links li{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    color:  white;
+    font-size: 1.3rem;
+    transition: 0.5s;
+}
+
+.links a:hover{
+    /* text-decoration: overline; */
+    color: var(--secondary);
+}
+
+.btn{
+    background:var(--secondary);
+    color:  var(--main-bg-color) !important;
+    border: 1px solid #ffffff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none !important;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.btn:hover{
+    background:  var(--main-bg-color);
+    color: #ffffff !important;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.541);
+}
+main{
+    width: 100vw;
+    height: 80vh;
+    
+    overflow: hidden;
+}
+
+/* .mobileNav{
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+}
+
+.mobileNav ul{
+    list-style: none;
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+
+} */
+.mainCont {
+    background:#074361;
+    min-height: 100vh;
+    padding: 200px 0 50px 0; 
+}
+.mainCont h1 {
+    margin: 0;
+    padding: 0;
+}
+.mainBod {
+    width: 70%;
+    margin: 0 auto;
+    color: #074361;
+    background: white;
+    padding: 20px 40px;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-gap: 1em;
+}
+
+.mainBod img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+    object-position: center;
+}
+
+.mainBod .fixedSide {
+    object-position: 70%;
+}
+
+.mainBod .fixedSideOther{
+    object-position: left;
+}
+
+.mainBod .fixedSideRight{
+    object-position: right;
+}
+
+#pageBtn {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fadeInAnimation ease 3s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+  }
+
+  .viewport-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 0 50px 0; */
+    /* padding-top: 100px; */
+     animation: fadeInLeft ease 3s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+
+  }
+
+  .schedule-header{
+    position: relative;
+    width: 100%;
+    /* height: 100vh; */
+    text-align: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 0 50px 0; */
+    /* padding-top: 100px; */
+     
+    background:linear-gradient(var(--main-bg-color),rgba(255, 255, 255, 0.801) 10% );
+
+  }
+
+  .schedule-header h1{
+      color: var(--main-bg-color);
+      font-size: 3rem;
+      
+  }
+
+  .schedule-header h2{
+      color :var(--main-bg-color);
+      width: 60%;
+      margin: 0 auto;
+  }
+
+  .scheduleOverlay{
+    padding: 200px 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.fees-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    
+    
+    /* margin: 0 0 50px 0; */
+    
+     
+    background:linear-gradient(var(--main-bg-color), white);
+
+}
+
+.feesOverlay{
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.274);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.feesOverlay .cont{
+    width: 70%;
+    margin: 0 auto;
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 0.3rem;
+    color: var(--main-bg-color);
+    border: 5px outset;
+}
+
+.feesOverlay .cont div{
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.fees-header h1{
+    font-size: 3rem;
+}
+
+.feesOverlay p{
+    font-size: 1.4rem;
+}
+
+
+form .form-all{
+    border-radius: 0.3rem !important;
+}
+
+
+  .fadeInLeft {
+    animation: fadeInLeft ease 3s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+  }
+
+  .fadeInUp{
+    animation: fadeInUp ease 3s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+  }
+#testimonials p, .hiddenTest .card p {
+    color: var(--main-bg-color);
+}
+ 
+
+  @keyframes fadeInAnimation { 
+    0% { 
+        opacity: 0; 
+    } 
+    100% { 
+        opacity: 1; 
+     } 
+} 
+@keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-1000px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ } 
+
+ @keyframes fadeInUp{
+    0% {
+       opacity: 0;
+       transform: translateY(1000px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ } 
+
+ @keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-1000px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ } 
+
+
+
+  .viewport-header h1{
+
+      font-size: 6rem;
+     
+      color: var(--secondary);
+      padding: 0;
+      /* -webkit-text-stroke-width:1.2px;
+  -webkit-text-stroke-color: #FFFEF1; */
+      margin: 0;
+      text-shadow: 0 20px 30px rgba(0, 0, 0, 0.527);
+  }
+
+  .viewport-header p{
+    padding: 0 0 40px 0;
+    margin: 0 auto;
+    width: 70%;
+    /* -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0E6C94; */
+    color:var(--secondary);
+    text-shadow: 0 20px 30px rgba(0, 0, 0, 0.795);
+    font-size: 2.7rem;
+    /* font-weight: bold; */
+  }
+
+  .viewport-header .btn{
+      font-size: 2.4rem;
+    
+  }
+
+
+
+  .content{
+    background:white;
+  }
+
+  .content2{
+    background: linear-gradient(#ffffff00,  var(--main-bg-color));
+  }
+
+.cards{
+    padding:100px 0;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1em;
+    
+}
+
+.card {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: grid;
+}
+
+.card h2{
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 4px 8px black;
+    font-family: 'Playfair Display', serif;
+}
+
+.card p{
+    font-size: 1.2rem;
+    margin: 10px auto 30px auto;
+    color:white;
+    line-height: 2rem;
+   width: 80%;
+    /* font-weight: bold; */
+}
+
+.card .btn {
+    font-size: 1.2rem;
+}
+
+.bubbles{
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.bubbleTop{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1em;
+    text-align: center;
+    
+}
+
+.bubbleMid{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    text-align: center;
+    grid-gap: 1em;
+    margin: 50px auto;
+}
+
+.bubbleMid2{
+    width: 100%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1em;
+}
+
+.bubbleBottom{
+    margin: 50px auto;
+        width: 50%; 
+}
+.bubble{
+    background: var(--secondary);
+    padding: 10px 30px;
+    border-radius: 50px;
+    width: auto;
+    font-size: 2rem;
+    margin: 0 auto;
+    color:  var(--main-bg-color);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.61);
+    cursor: pointer;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.bubble:hover{
+    background:   var(--main-bg-color);
+    color: var(--secondary);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.466);
+}
+#whatWeTreat {
+    text-align: center;
+}
+
+#whatWeTreat h2{
+    font-size: 5rem;
+    color: var(--main-bg-color);
+    margin: 0;
+    padding: 100px 0 50px 0;
+    font-family: 'Playfair Display', serif;
+}
+
+#whatWeTreat p{
+    color: #696969;
+}
+
+#covered{
+    width: 100%;
+  height:100vh;
+    text-align: center;
+    background: url(/images/backgroundSwoop.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#covered div{
+    width: 60%;
+    margin: 0 auto;
+}
+
+#covered h2{
+    font-size: 3rem;
+    color:  var(--main-bg-color);
+    font-family: 'Playfair Display', serif;
+    padding: 0;
+    margin: 0;
+}
+
+#covered p{
+    font-size: 2em;
+    line-height: 3.5rem;
+    color: #696969;
+    padding: 0;
+    margin: 10px 0 30px 0;
+}
+
+
+
+#covered .btn{
+    background:  var(--main-bg-color) !important;
+    color: white !important;
+    font-size: 1.4rem;
+}
+
+#testimonials, #ready{
+    text-align: center;
+  
+}
+
+#testimonials, #ready, #locations{
+    text-align: center;
+    min-height: 50vh;
+}
+
+
+
+#locations .addresses {
+    width: 50%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto) );
+}
+
+#testimonials h3, #locations  h3{
+    font-size: 3rem;
+    color:  var(--main-bg-color);
+    font-family: 'Playfair Display', serif;
+
+}
+
+#locations h4 {
+    color: var(--main-bg-color);
+}
+
+#locations a {
+    text-decoration: none;
+    color:rgba(16, 66, 100, 0.979);
+    font-size: 1rem;
+}
+
+#locations a:hover{
+    text-decoration: underline;
+}
+
+#ready h3{
+    font-size: 4rem;
+    color: var(--secondary);
+    font-family: 'Playfair Display', serif;
+}
+
+#testimonials .test {
+    padding: 20px 0 20px 0;
+}
+
+.ready img{
+    width: 100px;
+}
+
+
+
+  .noBorder{
+      border:none;
+      width: 40%;
+      margin: 0 auto;
+      display: block;
+      padding: 20px;
+  }
+
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background: var(--main-bg-color);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px 20px 40px 20px;
+    border: 10px outset #888;
+    border-radius: 0.3rem;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: var(--secondary);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #theTitle{
+      color:  var(--secondary);
+      font-size: 2.5rem;
+      font-family: 'Playfair Display', serif;
+  }
+
+  #theBody {
+      font-size: 1.4rem;
+      width: 70%;
+      margin: 0 auto;
+      color: var(--secondary);
+      padding-bottom: 40px;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background:  var(--main-bg-color);
+    border-bottom: 2px solid white;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  /* .sticky + .content {
+    padding-top: 60px;
+  } */
+
+  .sticky a {
+      font-size: 1.4rem;
+     
+  }
+
+  .sticky a:hover{
+
+      color: #b9b9b9;
+  }
+
+  .sticky img {
+      width: 85px;
+  }
+
+  .sticky .innerNav{
+      padding: 10px 0;
+  }
+  
+
+ .contactWrap{
+     width: 100%;
+     margin: 0 auto;
+     text-align: center;
+     background: white;
+ }
+#bigWhite{
+    width: 100%;
+}
+
+  button{
+      font-size: 1.2rem;
+      outline: none;
+  }
+
+ 
+
+  .lrg{
+      width: 100% !important;
+      font-size: 2rem;
+      border: 1px solid  var(--main-bg-color);
+  }
+
+
+.openMobile{
+    display: none;
+}
+  .openMobile img{
+      width: 50px;
+  }
+
+  .mobileNav{
+      display: none;
+  }
+
+  /* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color:rgba(16, 66, 100, 0.979); 
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  
+  /* The navigation links inside the overlay */
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+.overlay .btn{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.hiddenTest{
+    width: 80%;
+    margin: 0 auto;
+    display: none;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 1em;
+}
+
+.about-header{
+    background: url(/images/aboutBackground.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 70vh;
+   
+}
+.overlayAbout{
+    
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.274);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.overlayAbout div{
+    animation: fadeInDown ease 3s ;
+    animation-iteration-count: 1; 
+    animation-fill-mode: forwards; 
+}
+.about-header h1{
+    font-size: 5rem;
+    color: var(--secondary);
+    font-family: 'Playfair Display', serif;
+}
+
+
+.colorWrap{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+   
+.about-body{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px ;
+    /* border: 10px solid #0e6c94; */
+    border-radius: 0.3rem;
+    background: white;
+   
+}
+.underLine{
+    text-decoration: underline;
+}
+
+
+.bigger{
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+
+.about-body .img-box{
+    display: inline;
+    width: 250px;
+    float: right;
+    margin: 20px;
+}
+
+.about-body img{
+    width: 250px;
+}
+
+  @media only screen and (max-width: 1600px){
+    .links a{
+        font-size: 1rem;
+    }
+.fees-header{
+    height: auto;
+
+}
+
+footer img{
+    width: 30px;
+}
+    .feesOverlay{
+       padding: 200px 0 100px 0;
+       
+    }
+
+    .feesOverlay .cont {
+        width: 90%;
+    }
+    .feesOverlay .cont div, .contactWrap{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .about-header h1{
+        font-size: 3rem;
+    }
+
+    .about-body{
+        width: 100%;
+    }
+
+    .about-body .img-box{
+        float: none;
+        margin: 0;
+        width: 100%;
+       position: relative;
+        display: block;
+    }
+
+    .about-body .img-box img{
+        display: block;
+        margin: 0 auto;
+        width: 30%;
+        
+    }
+
+    .about-body .img-box .btn, .about-body .img-box img{
+        display: block;
+    }
+
+
+    
+    nav .btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .viewport-header h1 {
+        font-size: 3rem;
+    }
+
+    .viewport-header p{
+        font-size: 2.4rem;
+        line-height: 2.2rem;
+    }
+
+    #covered{
+        background-size: 100% 80%;
+    }
+    #covered h2{
+        font-size: 2rem;
+    }
+
+    #covered p{
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+  }
+
+  @media only screen and (max-width: 1024px){
+      nav {
+          background:  var(--main-bg-color);
+          position: fixed;
+        z-index: 550;
+          border-bottom: none;
+      }
+      .about-body .img-box img{
+       
+        width: 50%;
+        
+    }
+
+    .schedule-header h2{
+        width: 90%;
+    }
+
+  
+    
+      #theBody {
+       
+        width: 90%;
+        margin: 0 auto;
+        text-align: left;
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+      .modal-content {
+          margin: 25% auto;
+          width: 90%;
+      }
+
+      .sticky{
+        border-bottom: none;
+      }
+
+      #logo img{
+          width: 80px;
+      }
+
+      .openMobile{
+          display: block;
+          position: absolute;
+          top: 30px;
+          right: 20px;
+          cursor: pointer;
+      }
+
+      /* .openMobile img{
+          margin-left: 30px;
+      } */
+
+      .innerNav{
+          width: 100%;
+          padding-left: 10px;
+      }
+
+      nav .links{
+          display: none;
+      }
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+
+      .viewport-header h1{
+          font-size: 2rem;
+      }
+
+      .viewport-header p{
+          font-size: 1.5rem;
+      }
+     .cards{
+         display: block;
+         padding: 20px 0;
+     }
+     
+     .card{
+         margin: 20px 0 60px 0;
+     }
+
+     .card p{
+         width: 90%;
+     }
+
+     #whatWeTreat{
+         width: 90%;
+         margin: 0 auto;
+     }
+
+
+
+     .bubbleTop, .bubbleMid, .bubbleMid2, .bubbleBottom{
+         display: block;
+         width: 100%;
+     }
+     .bubbles {
+        width: 100%;
+         margin: 0 auto;
+     }
+     .bubble{
+         font-size: 1rem;
+         padding: 10px;
+         width: 100%;
+         margin: 20px 0;
+     }
+
+     #whatWeTreat h2, #covered h2{
+         font-size: 3rem;
+     }
+
+     .bubbleMid, .bubbleBottom{
+         margin: 0 ;
+     }
+
+     #covered {
+         height: auto;
+         margin: 40px auto;
+     }
+
+     #covered h2{
+         font-size: 1.8rem;
+     }
+     #covered div{
+         width: 90%;
+     }
+
+     #covered p{
+         font-size: 1.2rem;
+         line-height: 2rem;
+     }
+
+     .sticky .innerNav{
+         padding: 10px;
+     }
+
+     #ready .bubble{
+         width: 50%;
+         margin: 0 auto;
+     }
+
+     
+    
+    
+   
+  }
